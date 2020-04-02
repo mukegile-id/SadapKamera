@@ -1,10 +1,7 @@
 #!/bin/bash
 # Inspired by: github.com/thelinuxchoice/saycheese
 # Modified by: github.com/mukegile-id/SadapKamera
-
 trap 'printf "\n";stop' 2
-
-banner() {
 
 echo -e "\033[31m __          _ _     _     \e[0m ______ _     _          ";
 echo -e "\033[31m \ \        / (_)   | |    \e[0m|  ____(_)   | |         ";
@@ -18,7 +15,6 @@ printf "\e[1;77m V.1 Coded By github.com/mukegile-id \e[0m \n"
 
 }
 
-stop() {
 checkngrok=$(ps aux | grep -o "ngrok" | head -n1)
 checkphp=$(ps aux | grep -o "php" | head -n1)
 checkssh=$(ps aux | grep -o "ssh" | head -n1)
