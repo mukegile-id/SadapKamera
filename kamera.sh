@@ -2,16 +2,12 @@
 # SayCheese v1.0
 # coded by: github.com/thelinuxchoice/saycheese
 # If you use any part from this code, giving me the credits. Read the Lincense!
-trap 'printf "\n";stop' 2
-printf "\e[1;92m  ____            _             \e[0m\e[1;77m __  __                                \e[0m\n"
-printf "\e[1;92m / ___|  __ _  __| | __ _ _ ___ \e[0m\e[1;77m|  |/ / __ _ _    _  ___  _ ___   __ _ \e[0m\n"
-printf "\e[1;92m \___ \ / _\`|/ _  |/ _\`| ' _ \\e[0m\e[1;77m|    / / _\`| \  / |/ _ \| '___| / _\`|\e[0m\n"
-printf "\e[1;92m  ___) | (_| | (_| | (_| |  |_) \e[0m\e[1;77m|  |\`\ (_| |  \/  | ___/| |    | (_| |\e[0m\n"
-printf "\e[1;92m |____/ \__,_|\__,_|\__,_|  ___/\e[0m\e[1;77m|__| \_\__,_|_|\/|_|____||_|     \__,_|\e[0m\n"
-printf "\e[1;92m                         | |\e[0m                                 \n"
-printf "\e[1;92m                         |_|\e[0m                                 \n"
 
-printf " \e[1;77m Hack Kamera V.1 coded by MUKE_GILE.ID\e[0m \n"
+trap 'printf "\n";stop' 2
+
+banner() {
+
+printf " \e[1;92m Hack Kamera V.1 Coded By MUKE_GILE.ID\e[0m \n"
 
 printf "\n"
 
