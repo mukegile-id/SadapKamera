@@ -2,11 +2,8 @@
 # SayCheese v1.0
 # coded by: github.com/thelinuxchoice/saycheese
 # If you use any part from this code, giving me the credits. Read the Lincense!
-
 trap 'printf "\n";stop' 2
-
 banner() {
-
 
 printf "\e[1;92m  ____            _             \e[0m\e[1;77m __  __                                \e[0m\n"
 printf "\e[1;92m / ___|  __ _  __| | __ _ _ ___ \e[0m\e[1;77m|  |/ / __ _ _    _  ___  _ ___   __ _ \e[0m\n"
