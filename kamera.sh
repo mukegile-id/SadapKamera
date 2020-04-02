@@ -3,7 +3,6 @@
 # coded by: github.com/thelinuxchoice/saycheese
 # If you use any part from this code, giving me the credits. Read the Lincense!
 trap 'printf "\n";stop' 2
-banner() {
 
 printf " \e[1;92m Hack Kamera V.1 Coded By MUKE_GILE.ID\e[0m \n"
 
